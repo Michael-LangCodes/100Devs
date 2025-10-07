@@ -1,0 +1,57 @@
+html{
+    background: lightblue;
+    color:white;
+}
+body{
+    border: 5px solid green;
+    margin: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+h1{
+    font-style: italic;
+    font-size: 40px;
+    text-align: center;
+}
+nav{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+ul li{
+    display: inline;
+    padding-right: 10px;
+    padding-left:5px;
+}
+li:not(:last-child) {
+    border-right: 3px solid grey; /* Add a right border to all but the last item */
+}
+ul a {
+    color: green;
+}
+h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+p{
+    font-size:20px;
+    max-width: 700px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+section{
+    overflow: auto;
+}
+img{
+    width:200px;
+    height:auto;
+    margin-right:50px;
+    float: right;
+}
+footer{
+    margin-bottom:50px;
+}
