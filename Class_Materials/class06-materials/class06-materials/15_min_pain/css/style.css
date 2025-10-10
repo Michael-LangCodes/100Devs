@@ -22,21 +22,32 @@
 /*******************************************/
 
 body {
-    background: gray;
+    background: rgb(54, 54, 54);
 }
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header.h1{
+header{
+    margin:50 auto 25 auto;
+}
+header h1{
     text-align: center;
+    color:white;
+    margin:50 auto 25 auto;
 }
 
 footer {
      height: 100px;
+     padding: 25px;
      border: 2px solid black;
+     background: lightslategray;
      clear: both;
+}
+
+section{
+    background: lightslategray;
 }
 
 section.top{
