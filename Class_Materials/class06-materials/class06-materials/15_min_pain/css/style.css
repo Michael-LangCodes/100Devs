@@ -30,7 +30,7 @@ body {
 /* LAYOUT
 /*******************************************/
 header{
-    margin:50 auto 25 auto;
+    margin:50 auto;
 }
 header h1{
     text-align: center;
@@ -40,7 +40,7 @@ header h1{
 
 footer {
      height: 100px;
-     padding: 25px;
+     
      border: 2px solid black;
      background: lightslategray;
      clear: both;
