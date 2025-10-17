@@ -31,14 +31,25 @@ body {
 /*******************************************/
 header nav > * {
   float: left;
-  width: 10%;
-  margin: 0 5%;
+  width: 20%;
   list-style: none;
 }
 
 header nav li{
   float: left;
   width: 33%;
+  padding-right: 30%;
+}
+
+header nav ul{
+  padding-left: 0px;
+}
+
+header nav li a{
+  text-decoration: none;
+  color: blue;
+  size: 15px;
+  font-weight: 600;
 }
 
 main > section {
@@ -47,8 +58,8 @@ main > section {
   height: 600px;
 }
 img{
-  width: 50%;
-
+  width: 75%;
+  padding-left: 15%;
 }
 
 main > section h1, main section img{
