@@ -40,6 +40,68 @@ main{
 
 aside{
   width: 40%;
+  padding-right: 5%;
+}
+
+nav > a, nav > ul {
+  padding-left: 10%;
+  text-decoration: none;
+}
+
+nav > ul > li > a, nav > a{
+  text-decoration: none;
+  color: black;
+}
+
+nav > ul > li > a{
+  color: gray;
+  font-size: 20px;
+}
+
+nav > a{
+  color: gray;
+  font-size: 15px;
+}
+
+nav > ul > li{
+  padding-bottom: 5px;
+}
+
+nav > img{
+  width: 100%;
+  padding-right: 15%;
+}
+
+main > img{
+  width: 100%;
+}
+
+ul > li{
+  list-style: none;
+}
+
+body > section{
+  margin-left: 10%;
+  float: left;
+}
+
+body > section > section{
+  padding-top: 15px;
+  border-top: 1px solid lightgray;
+}
+
+body > section > section > section, body > section > section > img{
+  float: left;
+  width: 33.333%;
+  padding-right: 5%;
+}
+
+body > section > section > span{
+  float: left;
+}
+
+section > section > img{
+  padding: 0 0 20px 0;
 }
 
 /******************************************
