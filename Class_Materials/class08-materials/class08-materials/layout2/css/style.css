@@ -32,8 +32,17 @@ header nav > * {
   width: 25%;
 }
 
-header nav{
-  padding-bottom: 2px solid gray;
+main{
+  
+}
+
+header nav a{
+  margin-left: 20%;
+  width: 8%;
+  text-decoration: none;
+  color: blue;
+  size: 25px;
+  font-weight: 600;
 }
 
 header nav ul{
@@ -44,15 +53,6 @@ header nav li{
   float: left;
   width: 33%;
   padding-right: 30%;
-}
-
-header nav a{
-  margin-left: 20%;
-  width: 8%;
-  color: blue;
-  size: 15px;
-  text-decoration: none;
-  font-weight: 600;
 }
 
 header nav form{
@@ -70,7 +70,7 @@ header nav h2{
 header nav li a{
   text-decoration: none;
   color: blue;
-  size: 15px;
+  size: 25px;
   font-weight: 600;
 }
 
@@ -102,13 +102,16 @@ main section + section{
 }
 
 main section p{
-  margin-bottom: 35px;
+  margin-bottom: 50px;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 main section a{
   padding: 15px;
   margin-right: 5%;
   background: blue;
+  border-radius: 5px;
   color: white;
   text-decoration: none;
   font-weight: 800;
