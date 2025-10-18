@@ -68,6 +68,11 @@ section#UAE{
   padding-left: 15px;
 }
 
+section#CANANDA{
+  display: flex;
+  align-items: flex-end;
+}
+
 section#CANADA span{
   margin-left: 5%;
   padding-left: 1%;
@@ -120,7 +125,8 @@ main section + section section{
 }
 
 main section + section section h3{
-  padding-top: 100px;
+  display: flex;
+  align-items: flex-end;
   padding-left: 10px;
 }
 
