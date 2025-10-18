@@ -46,6 +46,34 @@ nav ul{
   width: 50%;
 }
 
+section#UAE{
+  background: gray;
+}
+
+section#CANADA span{
+  margin-left: 5%;
+  padding-left: 1%;
+  border-left: 4px solid blue;
+}
+
+section#HEALTH span{
+  margin-left: 5%;
+  padding-left: 1%;
+  border-left: 4px solid red;
+}
+
+section#WORKLIFE span{
+  margin-left: 5%;
+  padding-left: 1%;
+  border-left: 4px solid cyan;
+}
+
+section#CULTURE span{
+  margin-left: 5%;
+  padding-left: 1%;
+  border-left: 4px solid gray;
+}
+
 nav form input{
   width: 100%;
 }
@@ -53,6 +81,9 @@ nav form input{
 main + section section{
   width: 33.3333%;
   float: left;
+  padding-bottom: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 main > section{
@@ -66,6 +97,18 @@ main section + section section{
   height: 250px;
   float: left;
   border: 1px solid black;
+}
+
+main section + section section h3{
+  padding-top: 100px;
+  padding-left: 10px;
+}
+
+section h3#NEWS{
+  font-size: 25px;
+  font-weight: 600;
+  padding-top:35px;
+  padding-left: 20px;
 }
 /******************************************
 /* ADDITIONAL STYLES
