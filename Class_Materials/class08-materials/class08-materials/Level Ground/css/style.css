@@ -29,12 +29,83 @@ body {
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
+header{
+  background: rgb(13, 105, 148);
+  height: 50px;
+}
 
+header ul{
+  float: left;
+  list-style-type: none;
+  display: flex;
+}
+
+ul li a{
+  text-decoration: none;
+  padding-right: 10px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+section#top h1{
+  margin: 0px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+}
+
+section#top{
+  background: rgb(13, 105, 148);
+  height: 200px;
+  padding: 0px 30px;
+  text-align: center;
+}
+
+section#top a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
 }
 
 footer {
+  background: rgb(0, 0, 20);
+  color: white;
+  padding: 10px 20px;
+}
+footer section#socials{
+  float: left;
+  width: 25%;
+}
 
+footer section.info h4{
+  color: gray;
+  padding-bottom: 0;
+  margin-bottom: 5px;
+}
+
+footer section.info span{
+  color: white;
+  padding-bottom: 0;
+  margin-bottom: 15px;
+}
+
+footer section#address{
+  float: right;
+  width: 22.5%;
+}
+
+footer section#bottom{
+  clear: both;
+  padding-top: 15px;
+}
+
+footer section#bottom img{
+  float: right;
 }
 
 /******************************************
