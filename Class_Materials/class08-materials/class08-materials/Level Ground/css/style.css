@@ -72,6 +72,62 @@ section#top a{
   margin-bottom: 40px;
 }
 
+section#why{
+  background: white;
+  height: 200px;
+  padding: 0px 50px;
+  text-align: center;
+}
+
+section#selections{
+  float: left;
+  text-align: center;
+  height: 300px;
+  background: rgb(136, 145, 170);
+  padding: 0px 100px;
+  clear: both;
+}
+
+section#selections section{
+  float: left;
+  width: 50%;
+  padding: 0px 1%;
+}
+
+section#selections section p{
+  margin-bottom: 50px;
+}
+
+section#selections section a{
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+}
+
+section#volunteer{
+  background: white;
+  height: 250px;
+  padding: 10px 50px;
+  text-align: center;
+  clear: both;
+}
+
+section#volunteer p{
+  padding-bottom: 50px; 
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section#volunteer a{
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 25px;
+}
+
 footer {
   background: rgb(0, 0, 20);
   color: white;
