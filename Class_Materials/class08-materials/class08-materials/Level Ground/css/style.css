@@ -38,6 +38,7 @@ header ul{
   float: left;
   list-style-type: none;
   display: flex;
+  padding-left: 10%;
 }
 
 ul li a{
@@ -46,6 +47,19 @@ ul li a{
   color: white;
   font-size: 15px;
   font-weight: 600;
+}
+
+header a#right{
+  float: right;
+  text-decoration: none;
+  color: white;
+  padding: 15px 10%;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+header img{
+  padding-top: 15px;
 }
 
 section#top h1{
