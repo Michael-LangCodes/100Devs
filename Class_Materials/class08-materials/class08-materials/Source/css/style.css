@@ -53,9 +53,40 @@ header ul li a{
   font-weight: 600;
 }
 
-section{
+main{
   clear: both;
+  text-align: left;
+  padding-left: 10%;
 }
+
+section#other{
+  width: 50%;
+}
+
+section img#computer{
+  float: right;
+}
+
+section ul{ 
+  list-style-type: none;
+  float: left;
+  display: flex;
+  text-align: left;
+}
+
+section ul li{
+  width: 25%;
+}
+
+section ul li a{
+  text-decoration: none;
+  padding-right: 10px;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
 
 /******************************************
 /* ADDITIONAL STYLES
