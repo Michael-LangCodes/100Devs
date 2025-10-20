@@ -61,10 +61,11 @@ header button{
   margin-left: 150px;
 }
 
-main{
+main > section{
   clear: both;
   text-align: left;
   background: rgb(205, 222, 230);
+  float: left;
 }
 
 section#top{
@@ -91,8 +92,8 @@ section#other p{
 }
 
 section img#computer{
-  float: right;
-  width: 50%;
+  float: left;
+  width: 45%;
   clear: none;
 }
 
