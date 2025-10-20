@@ -34,7 +34,12 @@ header{
   height: 50px;
 }
 
-f
+header ul{
+  float: left;
+  list-style-type: none;
+  display: flex;
+  padding-left: 10%;
+}
 
 ul li a{
   text-decoration: none;
