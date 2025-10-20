@@ -63,7 +63,6 @@ header button{
 main{
   clear: both;
   text-align: left;
-  padding-left: 10%;
   background: rgb(205, 222, 230);
 }
 
@@ -86,6 +85,7 @@ section ul{
   display: flex;
   text-align: left;
   padding-right: 100px;
+  padding-bottom: 50px;
 }
 
 section ul li{
@@ -102,6 +102,16 @@ section ul li a{
 
 section#bottom{
   clear: both;
+  background:white;
+}
+
+section#bottom h1{
+  padding-top: 50px;
+}
+
+section#bottom p{
+  margin-bottom: 0px;
+  padding-bottom: 15px;
 }
 
 /******************************************
