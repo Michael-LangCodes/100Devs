@@ -94,7 +94,6 @@ section#other p{
 section img#computer{
   float: left;
   width: 45%;
-  clear: none;
 }
 
 section ul{ 
