@@ -25,6 +25,12 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
+@media screen and (max-width: 700px){
+  body{
+    width: 100%;
+}
+}
+
 header {
   background: rgb(205, 222, 230);
   height:  100px;
