@@ -112,7 +112,59 @@ section.discover a{
 }
 
 section.order{
-  
+  padding-top: 100px;
+  text-align: center;
+}
+
+section.order ul{
+  list-style-type: none;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+section.order ul li{
+  float:left;
+  padding-left: 30px;
+}
+
+section.order ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+section.order img{
+  padding: 0px 20px 50px 20px;
+  width: 100px;
+}
+
+section.book{
+  padding-top: 100px;
+  text-align: center;
+}
+
+section.book section{
+  width: 50%;
+  float: left;
+}
+
+section.book section+img{
+  clear: both;
+  padding-bottom: 100px;
+}
+
+section.customer{
+  text-align: center;
+}
+
+section.customer h3{
+  font-size: 40px;
+  font-weight: 600;
+}
+
+section.customer p{
+  padding: 50px 10% 50px 10%;
 }
 
 /******************************************
