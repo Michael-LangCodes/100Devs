@@ -22,19 +22,97 @@
 /*******************************************/
 
 body {
-
+  clear: both;
 }
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+header{
+  width: 100%;
 }
 
-footer {
+header nav{
+  float: right;
+  clear: both;
+  width: 60%;
+}
 
+header nav ul li{
+  float: left;
+  text-decoration: none;
+  list-style-type: none;
+  padding-left: 5%;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  width: 5%;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+section.content{
+  clear: both;
+}
+
+section.welcome{
+  float: left;
+  width: 50%;
+  padding-left: 10%;
+}
+
+section.welcome h1{
+  font-size: 50px;
+  font-weight: 600;
+  width: 50%;
+}
+
+section.welcome ul li{
+  text-decoration: none;
+  list-style-type: none;
+  float: left;
+  padding-left: 1%;
+}
+
+section.welcome ul li a{
+  color: orange;
+  padding-bottom: 100px;
+}
+
+section.discover{
+  padding-top: 100px;
+  float: left;
+  padding-left: 50%;
+  padding-right: 10%;
+}
+
+section.discover span{
+  font-size: 15px;
+  color: orange;
+}
+
+section.discover h2{
+  font-size: 40px;
+  font-weight: 600;
+}
+
+section.discover p + p{
+  padding-bottom: 30px;
+}
+
+section.discover a{
+  background: orange;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  border-top: 20px;
+}
+
+section.order{
+  
 }
 
 /******************************************
