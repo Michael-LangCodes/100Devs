@@ -116,15 +116,25 @@ section.order{
   text-align: center;
 }
 
+section.order h2{
+  font-size: 50px;
+  font-weight: 600;
+  padding-bottom: 50px;
+}
+
 section.order ul{
   list-style-type: none;
   width: 100%;
   padding-bottom: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 section.order ul li{
   float:left;
-  padding-left: 30px;
+  padding: 0px 30px;
 }
 
 section.order ul li a {
@@ -142,6 +152,18 @@ section.order img{
 section.book{
   padding-top: 100px;
   text-align: center;
+}
+
+section.book span.top{
+  color: orange;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+section.book h3{
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 25px;
 }
 
 section.book section{
