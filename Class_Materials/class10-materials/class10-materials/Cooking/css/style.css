@@ -68,6 +68,7 @@ section.welcome h1{
   font-size: 50px;
   font-weight: 600;
   width: 50%;
+  padding-top: 25px;
 }
 
 section.welcome ul li{
