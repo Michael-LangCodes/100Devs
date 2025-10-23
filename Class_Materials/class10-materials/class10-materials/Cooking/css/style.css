@@ -184,10 +184,11 @@ section.book section h4{
   padding-left: 40%;
 }
 
-section.book section span{
+section.book span{
   font-size: 25px;
   font-weight: 600;
   text-align: left;
+  margin-bottom: 15px;
 }
 
 section.customer{
