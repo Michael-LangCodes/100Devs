@@ -21,21 +21,48 @@
 /* BASE STYLES
 /*******************************************/
 
-body {
-
+section{
+  clear: both;
 }
 
+img{
+  float: left;
+}
+
+ul{
+  margin: 0px;
+}
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 header {
-
+  background: white;
+  float: left;
 }
 
-footer {
-
+img.logo{
+  padding: 5%;
 }
+
+header nav{
+  float: left;
+}
+
+header nav ul li{
+  text-decoration: none;
+  list-style-type: none;
+  float: left;
+  padding: 5% 0;
+}
+
+header nav ul li a{
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
 
 /******************************************
 /* ADDITIONAL STYLES
