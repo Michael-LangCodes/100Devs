@@ -23,6 +23,7 @@
 
 section{
   clear: both;
+  text-align: center;
 }
 
 img{
@@ -53,7 +54,7 @@ header nav ul li{
   text-decoration: none;
   list-style-type: none;
   float: left;
-  padding: 5% 0;
+  padding: 0% 5%;
 }
 
 header nav ul li a{
@@ -62,7 +63,14 @@ header nav ul li a{
   font-weight: 600;
 }
 
-
+header nav a{
+  float: right;
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
