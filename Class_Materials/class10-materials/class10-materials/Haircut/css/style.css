@@ -74,6 +74,11 @@ header nav a{
   font-weight: 600;
 }
 
+section.services{
+  width: 33%;
+  float: left;
+}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
