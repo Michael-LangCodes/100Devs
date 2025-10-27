@@ -79,6 +79,16 @@ section.services{
   float: left;
 }
 
+section section.display{
+  float:left;
+  display: flex;
+  justify-content: center;
+}
+
+section.services img{
+  margin: auto;
+}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
