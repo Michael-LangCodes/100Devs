@@ -115,7 +115,7 @@ section section.display{
 section.services img{
   width: 75%;
   display: block;
-  margin: auto;
+  margin: 0 auto;
 }
 
 /******************************************
