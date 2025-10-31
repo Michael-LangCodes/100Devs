@@ -78,21 +78,24 @@ header nav a{
 section.top > h1{
   float: left;
   text-align: left;
-  width: 75%;
-  margin-left: 150px;
-  font-size: 50px;
+  width: 50%;
+  margin-left: 250px;
+  font-size: 80px;
+  font-weight: 600;
 }
 
 section.top > p{
   float: left;
   text-align: left;
   width: 75%;
-  margin-left: 150px;
+  margin-left: 250px;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 section.top >a{
   float:left;
-  margin-left: 150px;
+  margin-left: 250px;
   margin-bottom: 150px;
 }
 
