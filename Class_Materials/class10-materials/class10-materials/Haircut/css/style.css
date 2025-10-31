@@ -80,6 +80,7 @@ section.top > h1{
   text-align: left;
   width: 75%;
   margin-left: 150px;
+  font-size: 50px;
 }
 
 section.top > p{
@@ -144,7 +145,7 @@ section section.display{
 }
 
 section.services img{
-  width: 75%;
+  width: 85%;
   display: block;
   margin: 0 auto;
 }
