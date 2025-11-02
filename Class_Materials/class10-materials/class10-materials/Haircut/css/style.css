@@ -123,6 +123,10 @@ section.side p.info{
   padding-bottom: 50px;
 }
 
+section.display{
+  margin: 0px 250px;
+}
+
 section.services{
   width: 33%;
   float: left;
@@ -151,6 +155,27 @@ section.services img{
   width: 85%;
   display: block;
   margin: 0 auto;
+}
+
+section.Momentum{
+  padding: 0px 150px;
+  text-align: left;
+}
+
+section.Momentum h2{
+  font-size: 25px;
+  font-weight: 600;
+  width: 50%;
+}
+
+section.Momentum p{
+  width: 50%;
+}
+
+section.Momentum img{
+  float: right;
+  width: 40%;
+  clear: both;
 }
 
 /******************************************
