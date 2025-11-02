@@ -40,11 +40,14 @@ ul{
 /*******************************************/
 header {
   background: white;
+  display: flex;
   float: left;
+  width: 100%;
 }
 
 img.logo{
-  padding: 5%;
+  padding: 10px 15px;
+  align-items: self-start;
 }
 
 header nav{
@@ -161,40 +164,41 @@ section.words{
   text-align: left;
   justify-content: flex-start;
   align-items: start;
-  padding-right: 50px;
+  padding-right: 150px;
 }
 
 section.Momentum{
   display: flex;
-  padding: 0 150px;
+  padding: 50px 150px;
   background: grey;
 }
 
 section.Momentum section.words h2{
-  font-size: 25px;
+  font-size: 50px;
   font-weight: 600;
   width: 100%;
 }
 
 section.Momentum p{
   width: 100%;
+  font-size: 20px;
   padding-bottom: 20px;
 }
 
 section.Momentum a{
   background: black;
-  padding: 15px;
+  padding: 20px 40px;
   color: white;
   text-decoration: none;
   list-style-type: none;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 300;
   display:inline-block;
   margin-bottom: 50px;
 }
 
 section.Momentum img{
-  width: 50%;
+  width: 40%;
   justify-content: flex-end;
   align-items: flex-start;
   object-fit: contain;
