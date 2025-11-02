@@ -157,13 +157,14 @@ section.services img{
   margin: 0 auto;
 }
 
-section.Momentum{
+section.words{
   padding: 0px 150px;
   text-align: left;
   background: grey;
+  float: left;
 }
 
-section.Momentum h2{
+section.Momentum section.words h2{
   font-size: 25px;
   font-weight: 600;
   width: 50%;
@@ -171,12 +172,22 @@ section.Momentum h2{
 
 section.Momentum p{
   width: 50%;
+  padding-bottom: 20px;
+}
+
+section.Momentum a{
+  background: black;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 section.Momentum img{
+  width: 50%;
   float: right;
-  width: 40%;
-  vertical-align: top;
 }
 
 /******************************************
