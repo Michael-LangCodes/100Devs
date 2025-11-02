@@ -158,20 +158,26 @@ section.services img{
 }
 
 section.words{
-  padding: 0px 150px;
   text-align: left;
+  justify-content: flex-start;
+  align-items: start;
+  padding-right: 50px;
+}
+
+section.Momentum{
+  display: flex;
+  padding: 0 150px;
   background: grey;
-  float: left;
 }
 
 section.Momentum section.words h2{
   font-size: 25px;
   font-weight: 600;
-  width: 50%;
+  width: 100%;
 }
 
 section.Momentum p{
-  width: 50%;
+  width: 100%;
   padding-bottom: 20px;
 }
 
@@ -183,11 +189,15 @@ section.Momentum a{
   list-style-type: none;
   font-size: 15px;
   font-weight: 300;
+  display:inline-block;
+  margin-bottom: 50px;
 }
 
 section.Momentum img{
   width: 50%;
-  float: right;
+  justify-content: flex-end;
+  align-items: flex-start;
+  object-fit: contain;
 }
 
 /******************************************
