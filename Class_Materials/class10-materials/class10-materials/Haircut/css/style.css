@@ -160,6 +160,7 @@ section.services img{
 section.Momentum{
   padding: 0px 150px;
   text-align: left;
+  background: grey;
 }
 
 section.Momentum h2{
@@ -175,7 +176,7 @@ section.Momentum p{
 section.Momentum img{
   float: right;
   width: 40%;
-  clear: both;
+  vertical-align: top;
 }
 
 /******************************************
