@@ -264,6 +264,9 @@ section.bottom h2{
 
 section.images{
   padding: 50px 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 section.images img{
