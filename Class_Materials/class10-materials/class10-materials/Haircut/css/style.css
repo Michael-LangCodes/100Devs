@@ -55,6 +55,8 @@ header nav{
 }
 
 header nav ul{
+  display: flex;
+  justify-content: center;
 }
 
 header nav ul li{
@@ -71,6 +73,7 @@ header nav ul li a{
 }
 
 header nav a{
+  justify-items: flex-end;
   float: right;
   text-decoration: none;
   list-style-type: none;
@@ -203,6 +206,30 @@ section.Momentum img{
   justify-content: flex-end;
   align-items: flex-start;
   object-fit: contain;
+}
+
+section.artists{
+  padding: 15px 150px;
+  display: flex;
+}
+
+section.artists section{
+  justify-content: start;
+  width: 33%;
+  display: flex;
+}
+
+section.artists section img{
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+section.artists section p{
+  padding: 15px 30px;
+  background: black;
+  color: white;
+  align-items: flex-start;
 }
 
 /******************************************
