@@ -27,7 +27,6 @@ section{
 }
 
 img{
-  float: left;
   clear: both;
 }
 
@@ -216,20 +215,44 @@ section.artists{
 section.artists section{
   justify-content: start;
   width: 33%;
-  display: flex;
+  margin: 0 auto;
 }
 
 section.artists section img{
   width: 75%;
   text-align: center;
-  margin: 0 auto;
 }
 
 section.artists section p{
-  padding: 15px 30px;
+  padding: 15px 0px;
   background: black;
   color: white;
-  align-items: flex-start;
+  margin: 0 auto;
+}
+
+section.offer{
+  background-color: lightgrey;
+  padding: 0px 150px 50px 150px;
+  text-align: left;
+}
+
+section.offer h3{
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+section.offer p{
+  font-size: 50px;
+}
+
+section.offer a{
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 15px 25px;
+  width: 250px;
+  text-align: center;
 }
 
 /******************************************
