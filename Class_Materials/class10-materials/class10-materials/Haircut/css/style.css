@@ -225,19 +225,31 @@ section.artists{
 section.artists section{
   justify-content: start;
   width: 33%;
+  padding: 0px 50px;
   margin: 0 auto;
 }
 
 section.artists section img{
-  width: 75%;
+  width: 100%;
   text-align: center;
 }
 
 section.artists section p{
-  padding: 15px 0px;
+  width: 75%;
+  padding: 5px 0px;
   background: black;
   color: white;
-  margin: 0 auto;
+  margin: -10px auto 0px auto;
+}
+
+section p.top{
+  font-size: 20px;
+  padding-top: 20px;
+  font-weight: 500;
+}
+
+section p.bottom{
+  font-size: 15px;
 }
 
 section.offer{
