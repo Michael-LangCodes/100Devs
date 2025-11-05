@@ -109,7 +109,7 @@ section.side{
   background: black;
   color: white;
   width: 300px;
-  height: 200px;
+  height: 250px;
   margin: 100px 0px 150px 250px;
 }
 
@@ -119,14 +119,24 @@ section.side a{
   color: black;
   text-decoration: none;
   list-style-type: none;
-  margin-top: 25px;
+  margin: 0px auto;
   font-size: 15px;
   font-weight: 300;
+  text-align: center;
+  width: 150px;
+}
+
+section.side p{
+  padding-top: 25px;
 }
 
 section.side p.info{
   padding-top: 15px;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
+}
+
+section.side a{
+  display: block;
 }
 
 section.display{
