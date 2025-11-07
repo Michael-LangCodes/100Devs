@@ -13,6 +13,13 @@ let z; // This should also result in undefined
 console.log(typeof rating);
 
 const fruits = ['apple', 'orange', 'pear'];
+fruits[3] = 'grapes';
+fruits.push('mangos');
+fruits.unshift('strawberries');
+fruits.pop()
+
+console.log(Array.isArray('fruits'));
+console.log(fruits.indexOf('oranges'))
 console.log(fruits);
 
 /*
