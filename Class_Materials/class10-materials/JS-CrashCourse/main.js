@@ -11,3 +11,10 @@ const y = undefined;
 let z; // This should also result in undefined
 
 console.log(typeof rating);
+
+const fruits = ['apple', 'orange', 'pear'];
+console.log(fruits);
+
+/*
+Mult-line Comment
+*/
