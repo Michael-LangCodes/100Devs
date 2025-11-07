@@ -8,5 +8,6 @@ const rating = 4.5;
 const isCool = true;
 const x = null;
 const y = undefined;
+let z; // This should also result in undefined
 
 console.log(typeof rating);
