@@ -10,6 +10,9 @@ const person = {
     }
 }
 
+const { firstName, lastName, address: {city}} = person;
+
+console.log(city);
 
 alert(person)
 console.log(person)
