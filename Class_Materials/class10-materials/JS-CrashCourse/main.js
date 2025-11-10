@@ -10,6 +10,8 @@ const person = {
     }
 }
 
+person.email='john@gmail.com'
+
 const { firstName, lastName, address: {city}} = person;
 
 console.log(city);
