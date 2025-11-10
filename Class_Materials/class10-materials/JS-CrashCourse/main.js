@@ -1,21 +1,20 @@
-const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 30,
-    hobbies: ['music','movies','sports'],
-    address: {
-        street: '50 main st',
-        city: 'Boston',
-        state: 'MA'
+const todos = [
+    {
+        id: 1,
+        text: 'Take out trash',
+        isCompleted: true
+    },
+    {
+        id: 2,
+        text: 'Meeting with boss',
+        isCompleted: true
+    },
+    {
+        id: 3,
+        text: 'Dentist appt',
+        isCompleted: false
     }
-}
+]
 
-person.email='john@gmail.com'
 
-const { firstName, lastName, address: {city}} = person;
-
-console.log(city);
-
-alert(person)
-console.log(person)
-console.log(person.firstName,person.lastName);
+console.log(todos);
