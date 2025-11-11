@@ -16,5 +16,5 @@ const todos = [
     }
 ]
 
-
+/* Comment Practice */
 console.log(todos);
