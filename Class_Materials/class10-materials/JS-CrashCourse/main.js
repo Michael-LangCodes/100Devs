@@ -32,3 +32,23 @@ while(i<10){
 for(let todo of todos){
     console.log(todo.text);
 }
+
+//foreach, filter
+todos.forEach(function(todo){
+    console.log(todo.text);
+});
+
+//map
+const todoText = todos.map(function(todo){
+    return todo.text;
+});
+console.log(todoText)
+
+//filter + map
+const todoCompleted = todos.filter(function(todo){
+    return todo.isCompleted == true;
+}).map(function(todo){
+    return todo.text;
+});
+
+console.log(todoCompleted)
