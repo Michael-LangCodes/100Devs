@@ -16,19 +16,9 @@ const todos = [
     }
 ]
 
-// For 
-for(let i = 0; i < todos.length; i++){
-    console.log(todos[i].text);
-}
+/* Comment Practice */
+const todoJSON = JSON.stringify(todos);
+console.log(todoJSON)
 
-// While
-let i = 0;
-while(i<10){
-    console.log('While Loop Number: ${i}');
-    i++;
-}
-
-//For of loop
-for(let todo of todos){
-    console.log(todo.text);
-}
+console.log(todos)
+console.log(todos[1].text);
