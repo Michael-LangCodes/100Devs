@@ -1,54 +1,24 @@
-const todos = [
-    {
-        id: 1,
-        text: 'Take out trash',
-        isCompleted: true
-    },
-    {
-        id: 2,
-        text: 'Meeting with boss',
-        isCompleted: true
-    },
-    {
-        id: 3,
-        text: 'Dentist appt',
-        isCompleted: false
-    }
-]
+//Conditionals
 
-// For 
-for(let i = 0; i < todos.length; i++){
-    console.log(todos[i].text);
+// if else else if 
+
+const x = 6;
+const y = 11;
+
+if(x === 10){
+    console.log('X is 10')
+}else if(x>10) {
+    console.log('x is greater than 10')
+} else {
+    console.log('X is not 10')
 }
 
-// While
-let i = 0;
-while(i<10){
-    console.log('While Loop Number: ${i}');
-    i++;
+// || means OR in JS
+if(x > 5 || y > 10){
+    console.log('X is more than 5 or y is more than 10')
 }
 
-//For of loop
-for(let todo of todos){
-    console.log(todo.text);
+// && means AND in JS
+if(x > 5 && y > 10){
+    console.log('X is more than 5 and y is more than 10')
 }
-
-//foreach, filter
-todos.forEach(function(todo){
-    console.log(todo.text);
-});
-
-//map
-const todoText = todos.map(function(todo){
-    return todo.text;
-});
-console.log(todoText)
-
-//filter + map
-const todoCompleted = todos.filter(function(todo){
-    return todo.isCompleted == true;
-}).map(function(todo){
-    return todo.text;
-});
-
-console.log(todoCompleted)
