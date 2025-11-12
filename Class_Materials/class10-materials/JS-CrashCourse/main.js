@@ -11,3 +11,5 @@ console.log(form2);
 //Multiple element selectors
 item = document.querySelectorAll('.item');
 console.log(item)
+
+//Comment for commit
