@@ -4,6 +4,8 @@
 
     /* To place some gap between boxes*/
     gap : 25px;
+
+    flex-direction: row;
 }
 
 [class ^="box-"]{
