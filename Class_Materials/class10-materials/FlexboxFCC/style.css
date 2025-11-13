@@ -1,0 +1,22 @@
+.container{
+    display : flex;
+    height : 100vh;
+
+    /* To place some gap between boxes*/
+    gap : 25px;
+}
+
+[class ^="box-"]{
+    width: 140px;
+    height: 140px;
+    background-color: skyblue;
+    border: 2px solid black;
+
+/*To view the letter better*/
+    font-size: 65px;
+
+/* Place text at center*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
