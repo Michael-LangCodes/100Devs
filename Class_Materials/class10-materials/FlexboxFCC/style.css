@@ -42,9 +42,14 @@ body{
 }
 
 .box-1{
-    flex-grow: 1;
+    /*flex-grow: 2;*/
+    /*flex-shrink: 3;*/
+    /*flex-basis: 200px;*/
+    
+    flex: 2 3 200px;
 }
 
+/*
 .box-2{
     flex-grow: 1;
 }
@@ -56,3 +61,4 @@ body{
 .box-4{
     flex-grow: 1;
 }
+*/
