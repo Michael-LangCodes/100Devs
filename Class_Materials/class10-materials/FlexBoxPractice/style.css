@@ -35,17 +35,17 @@
   
   .box-1{
     flex:2;
-    order:2;
+    order:3;
   }
   
   .box-2{
     flex:1;
-    order:1;
+    order:2;
   }
   
   .box-3{
     flex:1;
-    order: 3;
+    order: 1;
   }
   
   .container-2-box{
