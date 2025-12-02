@@ -34,6 +34,8 @@ li{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+/* These colors are used for recognition the train*/
+
 #purple{
   background: rgba(241,63,247,1);
 }
@@ -41,5 +43,5 @@ li{
   background: rgba(0,253,81,1);
 }
 #blue{
-  background: rgba(0,254,255);
+  background: rgba(0,255,255);
 }
