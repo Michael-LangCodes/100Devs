@@ -1,26 +1,20 @@
-document.getElementById('purple').onclick = partyPurple
-document.getElementById('green').onclick = partyGreen
-document.getElementById('blue').onclick = partyBlue
-document.getElementById('blue').onclick = test
+document.querySelector('#purple').addEventListener('click',purple)
+document.querySelector('#green').addEventListener('click',green)
+document.querySelector('#blue').addEventListener('click',blue)
+document.querySelector('#orange').addEventListener('click',orange)
 
-
-function partyPurple() {
-  document.querySelector('body').style.backgroundColor = 'rgba(241,63,247,1)'
-  document.querySelector('body').style.color = 'white'
+function purple(){
+    document.querySelector('body').style.backgroundColor = 'purple'
 }
 
-function partyGreen() {
-  document.querySelector('body').style.backgroundColor = 'rgba(0,253,81,1)'
-  document.querySelector('body').style.color = 'white'
+function green(){
+    document.querySelector('body').style.backgroundColor = 'green'
 }
 
-function partyBlue() {
-  document.querySelector('body').style.backgroundColor = 'rgba(0,255,255)'
-  document.querySelector('body').style.color = 'white'
+function blue(){
+    document.querySelector('body').style.backgroundColor = 'blue'
 }
 
-function test() {
-  document.querySelector('h1').style.backgroundColor = 'yellow'
-  document.querySelector('h1').style.color = 'black'
+function orange(){
+    document.querySelector('body').style.backgroundColor = 'orange'
 }
- 
