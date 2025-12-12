@@ -36,6 +36,11 @@ h2{
   color: red;
   font-weight: bold;
 }
+p{
+  font-size: 40px;
+  color: blue;
+  font-weight: 400;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
