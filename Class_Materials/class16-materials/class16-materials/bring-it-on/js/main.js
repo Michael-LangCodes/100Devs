@@ -44,4 +44,4 @@ function loopFunction(word,num){
         i++
     }
 }
-loopFunction('this',3)
+loopFunction('this',5)
