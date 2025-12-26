@@ -22,7 +22,7 @@ twoNumbersPower(2,3);
 // *Conditionals*
 // Create a function that takes in a boolean and a string. If the boolean is true, alert the string. If the boolean is false, console log the string
 function boolString(bool, input){
-    if (bool === true){
+    if (bool){
         alert(input);
     }else{
         console.log(input);
