@@ -21,3 +21,5 @@ function sumRange(array){
 }
 console.log(range(1,10));
 console.log(sumRange(range(1,10)));
+
+//Reversal of Array
