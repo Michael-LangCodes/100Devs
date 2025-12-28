@@ -32,4 +32,12 @@ function reverseArray(input){
     return reverse_array;
 }
 
-console.log(reverseArray(['A','B','C']));
+function reverseArrayInPlace(array){
+    return array.reverse();
+}
+
+array = ['A','B','C']
+console.log(reverseArray(array));
+console.log(array);
+console.log(reverseArrayInPlace(array));
+console.log(array);
