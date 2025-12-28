@@ -41,3 +41,16 @@ console.log(reverseArray(array));
 console.log(array);
 console.log(reverseArrayInPlace(array));
 console.log(array);
+
+// Lists and Arrays
+function arrayToList(array){
+    output = {};
+    for(let i = 0; i <array.length; i++){
+        if(i<array.length-1){
+            output.push({value:array[i], rest:{} })
+        }else if(i === array.length-1){
+            output.push({value:array[i], rest:null })
+        }
+    }
+    return output;
+}
