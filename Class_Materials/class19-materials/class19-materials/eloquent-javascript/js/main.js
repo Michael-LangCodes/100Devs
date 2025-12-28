@@ -24,3 +24,12 @@ console.log(range(1,12));
 console.log(sumRange(range(1,12)));
 
 //Reversal of Array
+function reverseArray(input){
+    let reverse_array = [];
+    for(let i = 0; i<input.length; i++){
+        reverse_array.unshift(input[i])
+    }
+    return reverse_array;
+}
+
+console.log(reverseArray(['A','B','C']));
