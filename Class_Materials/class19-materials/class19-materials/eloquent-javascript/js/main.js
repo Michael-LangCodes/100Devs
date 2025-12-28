@@ -1,12 +1,12 @@
 //Sum of a Range
-function range(start, end){
+function range(start, end, inc=1){
     let output_array = [];
-    if(start > end){
-        for(let i = start;i<=end;i++){
+    if(start < end){
+        for(let i = start;i<=end;i+=inc){
             output_array.push(i);
         }
-    }else if(start < end){
-        for(let i = start; i >= end; i--){
+    }else if(start > end){
+        for(let i = start; i >= end; i-=inc){
             output_array.push(i);
         }
     }
@@ -18,8 +18,9 @@ function sumRange(array){
     for(let i = 0; i<array.length; i++){
         sum += array[i]
     }
+    return sum;
 }
-console.log(range(1,10));
-console.log(sumRange(range(1,10)));
+console.log(range(1,12));
+console.log(sumRange(range(1,12)));
 
 //Reversal of Array
