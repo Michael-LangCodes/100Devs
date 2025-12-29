@@ -27,7 +27,17 @@ for(let i = 0; i< values2.length; i++){
     if (values2[i]>max){
         max = values2[i];
     }
-    console.log(max);
 }
+console.log(max);
 
 //List of Words
+let word = prompt("Enter Word");
+let arrayWords = [];
+while(word != 'stop'){
+    arrayWords.push(word);
+    word = prompt("Enter Word");
+}
+//console.log(arrayWords);
+for(let i = 0; i < arrayWords.length; i++){
+    console.log(arrayWords[i]);
+}
