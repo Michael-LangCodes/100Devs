@@ -24,7 +24,7 @@ cubeRoot(9);
 //Create a function that takes in a month. If it is a summer month alert "YAY". If another other month, alert "Booo"
 function monthTime(month){
     let monthLowerCase = month.toLowerCase()
-    if(monthLowerCase === 'June' || monthLowerCase === 'July' || monthLowerCase === 'August'){
+    if(monthLowerCase === 'june' || monthLowerCase === 'july' || monthLowerCase === 'august'){
         alert('YAY');
     }else{
         alert('Booo')
