@@ -41,7 +41,7 @@ function gamePlay(decision){
         console.log('Bot Won')
     }else if(decision === 'rock' && bot === 'scissors' ||decision === 'paper' && bot === 'rock'||decision === 'scissors' && bot === 'paper') {
         console.log('You Won!!')
-    }else if (decision === 'rock' && bot === 'rock' ||decision === 'paper' && bot === 'paper'||decision === 'scissors' && bot === 'scissors'){
+    }else if (decision === bot){
         console.log('Tie. RePlay Starting')
         gamePlay(decision)
     }else{
