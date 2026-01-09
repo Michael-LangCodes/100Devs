@@ -24,9 +24,9 @@ function rockPaperScissors(){
     const val = Math.random()
     if (val < 0.33){
         output = 'rock';
-    }else if (val >= 0.33 && val < 0.66){
+    }else if (val < 0.66){
         output = 'paper';
-    }else if (val>= 0.66 && val < 1){
+    }else if (val < 1){
         output = 'scissors'
     }else{
         console.log('Not Valid')
