@@ -16,6 +16,7 @@ function Circle(radius){
     }
 }
 const another = new Circle(1);
+another.location = {x: 4}
 
 const circle = {
     radius: 1,
@@ -27,3 +28,7 @@ const circle = {
         console.log('draw');
     }
 };
+
+for (let key in another){
+    console.log(key, another[key]);
+}

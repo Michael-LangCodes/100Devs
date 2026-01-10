@@ -1,4 +1,9 @@
-let x = 10;
-let y = x;
+let x ={value: 10};
 
-x = 20;
+
+function increase(x){
+    x.value++;
+}
+
+increase(x);
+console.log(x);
