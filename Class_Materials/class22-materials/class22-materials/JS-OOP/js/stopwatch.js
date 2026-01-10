@@ -31,3 +31,4 @@ const sw = new Stopwatch()
 
 sw.duration()
 sw.start()
+sw.stop()
