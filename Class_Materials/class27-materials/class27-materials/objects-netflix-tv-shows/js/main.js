@@ -5,7 +5,18 @@ class NetflixShow{
         this.location = location 
         this.genre = genre 
         this.episodes = episodes 
-        this.
+    
+    }
+    play(){
+        console.log('Playing....')
+    }
+    stop(){
+        console.log('Stopping...')
+    }
+    saveToList(){
+        console.log('Saved To List')
     }
 }
 
+
+let bridgerton = new NetflixShow('Bridgerton', 'England', 'Romance', 25);
