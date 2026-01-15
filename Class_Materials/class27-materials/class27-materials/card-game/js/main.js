@@ -23,8 +23,8 @@ function drawTwo(){
   fetch(url)
     .then(res => res.json())
     .then(data=>{
-      document.querySelector('#player1').src = data.cards[0].image;
-      document.querySelector('#player2').src = data.cards[1].image;
+      document.querySelector('#player1card1').src = data.cards[0].image;
+      document.querySelector('#player2card1').src = data.cards[1].image;
 
       let player1Val = convertToNum(data.cards[0].value);
       let player2Val = convertToNum(data.cards[1].value);
@@ -37,6 +37,20 @@ function drawTwo(){
         document.querySelector('h3').innerText = 'Time For War!!!';
       }
     })
+}
+
+function startWar(){
+  let player1Pile = {};
+  let player2Pile = {};
+  const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
+  for(let i = 0; i < 3; i++){
+    fetch(url)
+    .then(res => res.json())
+    .then(data=>{
+      document.querySelector('#player1').src = data.cards[0].image;
+      document.querySelector('#player2').src = data.cards[1].image;
+  })
+  }
 }
 
 function convertToNum(val){
