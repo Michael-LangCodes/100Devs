@@ -57,8 +57,10 @@ function startWar(){
     .then(data=>{
       player1Pile.push(data.cards[0])
       player2Pile.push(data.cards[1])
-      document.querySelector(`#player1card${i+1}`).src = data.cards[0].image
-      document.querySelector(`#player2card${i+1}`).src = data.cards[1].image
+      document.querySelector(`#player1card${i+1}`).src = data.cards[0].image;
+      document.querySelector(`#player2card${i+1}`).src = data.cards[1].image;
+      document.querySelector(`#player1card${i+1}`).style.display = 'inline';
+      document.querySelector(`#player2card${i+1}`).style.display = 'inline';
       //document.querySelector('#player1').src = data.cards[0].image;
       //document.querySelector('#player2').src = data.cards[1].image;
   })
@@ -67,7 +69,9 @@ function startWar(){
 
 
   let player1WarVal = convertToNum(player1Pile[player1Pile.length-1]).value;
+  console.log(`Player 1 val: ${player1WarVal}`)
   let player2WarVal = convertToNum(player2Pile[player2Pile.length-1]).value;
+  console.log(`Player 2 val: ${player2WarVal}`)
   if(player1WarVal > player2WarVal){
         document.querySelector('h3').innerText = 'Player 1 Wins';
       }else if(player1WarVal < player2WarVal){
