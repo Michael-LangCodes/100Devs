@@ -19,13 +19,11 @@ img{
     display: none;
 }
 
-.cardimages {
+.center {
   display: flex;
-}
-
-.cardimages {
   justify-content: space-around;
 }
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/

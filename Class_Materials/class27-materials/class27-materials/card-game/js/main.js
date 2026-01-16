@@ -13,23 +13,15 @@ if (!localStorage.getItem('storedDeckID')){
       });
 }
 
-let deckId = localStorage.getItem('storedDeckID')
-console.log(deckId)
+let deckId = localStorage.getItem('storedDeckID');
+console.log(deckId);
 
-document.querySelector('button').addEventListener('click', drawTwo)
+document.querySelector('#Deal').addEventListener('click', drawTwo);
+document.querySelector('#War').addEventListener('click', startWar);
 
 async function drawTwo(){
   resetTwoCards();
-  //document.querySelector('h3').innerText = ''
   const cards = await safeDraw(2);
-  //const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
-  //await fetch(url)
-  //  .then(res => res.json())
-  //  .then(data=>{
-  //    if(data.success === false){
-  //      endOfDeck();
-  //      drawTwo();
-  //    }else{
       console.log(cards)
       document.querySelector('#player1card1').src = cards[0].image;
       document.querySelector('#player2card1').src = cards[1].image;
@@ -44,38 +36,14 @@ async function drawTwo(){
       }else{
         document.querySelector('h3').innerText = 'Time For War!!!';
         console.log('Starting War!!!');
-        startWar();
+        document.querySelector(`#War`).style.display = 'inline';
       }
     }
-    //})
-//}
 
-
-  //for(let i = 0; i < 3; i++){
-    //await fetch(url)
-    //.then(res => res.json())
-    //.then(data=>{
-    //  if(data.success === false){
-    //    endOfDeck(); //Re-sets the deck
-    //  }
-    //  player1Pile.push(cards[i])
-    //  player2Pile.push(cards[i])
-    //  document.querySelector(`#player1card${i+1}`).src = cards[i].image;
-    //  document.querySelector(`#player2card${i+1}`).src = cards[i].image;
-     // console.log('Test if card value of 1 can be read:'+cards[i].value);
-     // console.log('Test if card value of 2 can be read:'+cards[i].value);
-    //  console.log('Test if pile of 1 can be read:'+player1Pile);
-    //  console.log('Test if pile of 2 can be read:'+player2Pile);
-    //  document.querySelector(`#player1card${i+1}`).style.display = 'inline';
-    //  document.querySelector(`#player2card${i+1}`).style.display = 'inline';
-      //document.querySelector('#player1').src = data.cards[0].image;
-      //document.querySelector('#player2').src = data.cards[1].image;
-  //}
-  //}
 
 async function startWar(){
+  resetWarButton();
   const cards = await safeDraw(6);
-  //const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
   let player1Pile = [];
   let player2Pile = [];
   let p1Index = 1;
@@ -94,11 +62,7 @@ async function startWar(){
     }
   });
 
-
-
   console.log(player1Pile);
-  //console.log(`This is Player 1 In War ${player1Pile}`);
-
 
   let player1WarVal = convertToNum(player1Pile[2].value);
   console.log(`Player 1 val: ${player1WarVal}`)
@@ -110,6 +74,7 @@ async function startWar(){
         document.querySelector('h3').innerText = 'Player 2 Wins';
       }else{
         document.querySelector('h3').innerText = 'Time For War Again!!!';
+        document.querySelector(`#War`).style.display = 'inline';
       }
 }
 
@@ -132,6 +97,10 @@ function resetTwoCards(){
     document.querySelector(`#player1card${i+1}`).style.display = 'none';
     document.querySelector(`#player2card${i+1}`).style.display = 'none';
   }
+}
+
+function resetWarButton(){
+  document.querySelector(`#War`).style.display = 'none';
 }
 
 async function endOfDeck(){
