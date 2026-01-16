@@ -21,20 +21,21 @@ document.querySelector('button').addEventListener('click', drawTwo)
 async function drawTwo(){
   resetTwoCards();
   //document.querySelector('h3').innerText = ''
-  const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
-  await fetch(url)
-    .then(res => res.json())
-    .then(data=>{
-      if(data.success === false){
-        endOfDeck();
-        drawTwo();
-      }else{
-      console.log(data)
-      document.querySelector('#player1card1').src = data.cards[0].image;
-      document.querySelector('#player2card1').src = data.cards[1].image;
+  const cards = await safeDraw(2);
+  //const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
+  //await fetch(url)
+  //  .then(res => res.json())
+  //  .then(data=>{
+  //    if(data.success === false){
+  //      endOfDeck();
+  //      drawTwo();
+  //    }else{
+      console.log(cards)
+      document.querySelector('#player1card1').src = cards[0].image;
+      document.querySelector('#player2card1').src = cards[1].image;
 
-      let player1Val = convertToNum(data.cards[0].value);
-      let player2Val = convertToNum(data.cards[1].value);
+      let player1Val = convertToNum(cards[0].value);
+      let player2Val = convertToNum(cards[1].value);
 
       if(player1Val > player2Val){
         document.querySelector('h3').innerText = 'Player 1 Wins';
@@ -46,35 +47,55 @@ async function drawTwo(){
         startWar();
       }
     }
-    })
-}
+    //})
+//}
 
 
-async function startWar(){
-  const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
-  let player1Pile = [];
-  let player2Pile = [];
-  for(let i = 0; i < 3; i++){
-    await fetch(url)
-    .then(res => res.json())
-    .then(data=>{
-      if(data.success === false){
-        endOfDeck(); //Re-sets the deck
-      }
-      player1Pile.push(data.cards[0])
-      player2Pile.push(data.cards[1])
-      document.querySelector(`#player1card${i+1}`).src = data.cards[0].image;
-      document.querySelector(`#player2card${i+1}`).src = data.cards[1].image;
-      console.log('Test if card value of 1 can be read:'+data.cards[0].value);
-      console.log('Test if card value of 2 can be read:'+data.cards[1].value);
-      console.log('Test if pile of 1 can be read:'+player1Pile);
-      console.log('Test if pile of 2 can be read:'+player2Pile);
-      document.querySelector(`#player1card${i+1}`).style.display = 'inline';
-      document.querySelector(`#player2card${i+1}`).style.display = 'inline';
+  //for(let i = 0; i < 3; i++){
+    //await fetch(url)
+    //.then(res => res.json())
+    //.then(data=>{
+    //  if(data.success === false){
+    //    endOfDeck(); //Re-sets the deck
+    //  }
+    //  player1Pile.push(cards[i])
+    //  player2Pile.push(cards[i])
+    //  document.querySelector(`#player1card${i+1}`).src = cards[i].image;
+    //  document.querySelector(`#player2card${i+1}`).src = cards[i].image;
+     // console.log('Test if card value of 1 can be read:'+cards[i].value);
+     // console.log('Test if card value of 2 can be read:'+cards[i].value);
+    //  console.log('Test if pile of 1 can be read:'+player1Pile);
+    //  console.log('Test if pile of 2 can be read:'+player2Pile);
+    //  document.querySelector(`#player1card${i+1}`).style.display = 'inline';
+    //  document.querySelector(`#player2card${i+1}`).style.display = 'inline';
       //document.querySelector('#player1').src = data.cards[0].image;
       //document.querySelector('#player2').src = data.cards[1].image;
-  })
-  }
+  //}
+  //}
+
+async function startWar(){
+  const cards = await safeDraw(6);
+  //const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
+  let player1Pile = [];
+  let player2Pile = [];
+  let p1Index = 1;
+  let p2Index = 1;
+  cards.forEach((card, index) => {
+    if (index % 2 === 0) {
+      player1Pile.push(card);
+      document.querySelector(`#player1card${p1Index}`).src = cards[index].image;
+      document.querySelector(`#player1card${p1Index}`).style.display = 'inline';
+      p1Index++;
+    } else {
+      player2Pile.push(card);
+      document.querySelector(`#player2card${p2Index}`).src = cards[index].image;
+      document.querySelector(`#player2card${p2Index}`).style.display = 'inline';
+      p2Index++;
+    }
+  });
+
+
+
   console.log(player1Pile);
   //console.log(`This is Player 1 In War ${player1Pile}`);
 
@@ -113,8 +134,26 @@ function resetTwoCards(){
   }
 }
 
-function endOfDeck(){
+async function endOfDeck(){
   const url = `https://deckofcardsapi.com/api/deck/${deckId}/shuffle/`;
-  fetch(url)
+  await fetch(url)
   console.log('Re-shuffle Deck!!');
+}
+
+async function safeDraw(count){
+  const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=${count}`;
+  let res = await fetch(url);
+  let data = await res.json();
+    if (!data.success || data.remaining < 0){
+      console.log('Not Safe - Shuffling Deck')
+      await endOfDeck();
+      console.log('Deck Shuffled');
+      await fetch(url);
+      res = await fetch(url);
+      data = await res.json();
+      console.log('New Fetch Called')
+  }
+  console.log('returning cards')
+  console.log(`This is the data: ${data.cards}`)
+  return data.cards;
 }
