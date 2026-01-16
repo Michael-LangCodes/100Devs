@@ -18,6 +18,14 @@ img{
 .hidden-element {
     display: none;
 }
+
+.cardimages {
+  display: flex;
+}
+
+.cardimages {
+  justify-content: space-around;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
