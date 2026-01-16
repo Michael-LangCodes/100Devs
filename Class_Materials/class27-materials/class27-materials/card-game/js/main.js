@@ -14,7 +14,6 @@ if (!localStorage.getItem('storedDeckID')){
 }
 
 let deckId = localStorage.getItem('storedDeckID');
-console.log(deckId);
 
 document.querySelector('#Deal').addEventListener('click', drawTwo);
 document.querySelector('#War').addEventListener('click', startWar);
@@ -22,7 +21,6 @@ document.querySelector('#War').addEventListener('click', startWar);
 async function drawTwo(){
   resetTwoCards();
   const cards = await safeDraw(2);
-      console.log(cards)
       document.querySelector('#player1card1').src = cards[0].image;
       document.querySelector('#player2card1').src = cards[1].image;
 
@@ -35,7 +33,6 @@ async function drawTwo(){
         document.querySelector('h3').innerText = 'Player 2 Wins';
       }else{
         document.querySelector('h3').innerText = 'Time For War!!!';
-        console.log('Starting War!!!');
         document.querySelector(`#War`).style.display = 'inline';
       }
     }
@@ -65,9 +62,7 @@ async function startWar(){
   console.log(player1Pile);
 
   let player1WarVal = convertToNum(player1Pile[2].value);
-  console.log(`Player 1 val: ${player1WarVal}`)
   let player2WarVal = convertToNum(player2Pile[2].value);
-  console.log(`Player 2 val: ${player2WarVal}`)
   if(player1WarVal > player2WarVal){
         document.querySelector('h3').innerText = 'Player 1 Wins';
       }else if(player1WarVal < player2WarVal){
@@ -106,7 +101,6 @@ function resetWarButton(){
 async function endOfDeck(){
   const url = `https://deckofcardsapi.com/api/deck/${deckId}/shuffle/`;
   await fetch(url)
-  console.log('Re-shuffle Deck!!');
 }
 
 async function safeDraw(count){
@@ -114,15 +108,10 @@ async function safeDraw(count){
   let res = await fetch(url);
   let data = await res.json();
     if (!data.success || data.remaining < 0){
-      console.log('Not Safe - Shuffling Deck')
       await endOfDeck();
-      console.log('Deck Shuffled');
       await fetch(url);
       res = await fetch(url);
       data = await res.json();
-      console.log('New Fetch Called')
   }
-  console.log('returning cards')
-  console.log(`This is the data: ${data.cards}`)
   return data.cards;
 }

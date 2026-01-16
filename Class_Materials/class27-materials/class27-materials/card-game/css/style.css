@@ -10,6 +10,14 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
+h1{
+  display: flex;
+  justify-content: center;
+}
+h2, h3{
+  margin-left: 5rem;
+}
+
 img{
   display: block;
   margin: 0 auto;
