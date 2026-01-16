@@ -24,6 +24,7 @@ function reshuffle(){
 }
 
 function drawTwo(){
+  resetTwoCards();
   const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
   fetch(url)
     .then(res => res.json())
@@ -98,4 +99,16 @@ function convertToNum(val){
   }else{
     return Number(val);
   }
+}
+
+function resetTwoCards(){
+  for(let i = 1; i < 3; i++){
+    document.querySelector(`#player1card${i+1}`).style.display = 'none';
+    document.querySelector(`#player2card${i+1}`).style.display = 'none';
+  }
+}
+
+function endOfDeck(){
+  const url = `https://deckofcardsapi.com/api/deck/${deckId}/shuffle/`;
+  fetch(url)
 }
