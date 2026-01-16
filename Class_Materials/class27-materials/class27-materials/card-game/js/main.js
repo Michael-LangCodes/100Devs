@@ -49,10 +49,10 @@ function drawTwo(){
 
 let player1Pile = [];
 let player2Pile = [];
-function startWar(){
+async function startWar(){
   const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
   for(let i = 0; i < 3; i++){
-    fetch(url)
+    await fetch(url)
     .then(res => res.json())
     .then(data=>{
       player1Pile.push(data.cards[0])
@@ -73,9 +73,9 @@ function startWar(){
   //console.log(`This is Player 1 In War ${player1Pile}`);
 
 
-  let player1WarVal = convertToNum(player1Pile[0]).value;
+  let player1WarVal = convertToNum(player1Pile[0].value);
   console.log(`Player 1 val: ${player1WarVal}`)
-  let player2WarVal = convertToNum(player2Pile[0]).value;
+  let player2WarVal = convertToNum(player2Pile[0].value);
   console.log(`Player 2 val: ${player2WarVal}`)
   if(player1WarVal > player2WarVal){
         document.querySelector('h3').innerText = 'Player 1 Wins';
