@@ -1,4 +1,4 @@
-//Example fetch using pokemonapi.co
+//Create variable for the deck of cards ID into local storage
 if (!localStorage.getItem('storedDeckID')){
   let deckId = '';
   fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
@@ -18,17 +18,17 @@ console.log(deckId)
 
 document.querySelector('button').addEventListener('click', drawTwo)
 
-function reshuffle(){
-  const url = `https://deckofcardsapi.com/api/deck/${deckId}/shuffle/`;
-  fetch(url)
-}
-
-function drawTwo(){
+async function drawTwo(){
   resetTwoCards();
+  //document.querySelector('h3').innerText = ''
   const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
-  fetch(url)
+  await fetch(url)
     .then(res => res.json())
     .then(data=>{
+      if(data.success === false){
+        endOfDeck();
+        drawTwo();
+      }else{
       console.log(data)
       document.querySelector('#player1card1').src = data.cards[0].image;
       document.querySelector('#player2card1').src = data.cards[1].image;
@@ -45,17 +45,22 @@ function drawTwo(){
         console.log('Starting War!!!');
         startWar();
       }
+    }
     })
 }
 
-let player1Pile = [];
-let player2Pile = [];
+
 async function startWar(){
   const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
+  let player1Pile = [];
+  let player2Pile = [];
   for(let i = 0; i < 3; i++){
     await fetch(url)
     .then(res => res.json())
     .then(data=>{
+      if(data.success === false){
+        endOfDeck(); //Re-sets the deck
+      }
       player1Pile.push(data.cards[0])
       player2Pile.push(data.cards[1])
       document.querySelector(`#player1card${i+1}`).src = data.cards[0].image;
@@ -74,9 +79,9 @@ async function startWar(){
   //console.log(`This is Player 1 In War ${player1Pile}`);
 
 
-  let player1WarVal = convertToNum(player1Pile[0].value);
+  let player1WarVal = convertToNum(player1Pile[2].value);
   console.log(`Player 1 val: ${player1WarVal}`)
-  let player2WarVal = convertToNum(player2Pile[0].value);
+  let player2WarVal = convertToNum(player2Pile[2].value);
   console.log(`Player 2 val: ${player2WarVal}`)
   if(player1WarVal > player2WarVal){
         document.querySelector('h3').innerText = 'Player 1 Wins';
@@ -111,4 +116,5 @@ function resetTwoCards(){
 function endOfDeck(){
   const url = `https://deckofcardsapi.com/api/deck/${deckId}/shuffle/`;
   fetch(url)
+  console.log('Re-shuffle Deck!!');
 }
