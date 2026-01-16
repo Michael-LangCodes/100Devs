@@ -47,9 +47,9 @@ function drawTwo(){
     })
 }
 
+let player1Pile = [];
+let player2Pile = [];
 function startWar(){
-  let player1Pile = [];
-  let player2Pile = [];
   const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
   for(let i = 0; i < 3; i++){
     fetch(url)
@@ -59,18 +59,23 @@ function startWar(){
       player2Pile.push(data.cards[1])
       document.querySelector(`#player1card${i+1}`).src = data.cards[0].image;
       document.querySelector(`#player2card${i+1}`).src = data.cards[1].image;
+      console.log('Test if card value of 1 can be read:'+data.cards[0].value);
+      console.log('Test if card value of 2 can be read:'+data.cards[1].value);
+      console.log('Test if pile of 1 can be read:'+player1Pile);
+      console.log('Test if pile of 2 can be read:'+player2Pile);
       document.querySelector(`#player1card${i+1}`).style.display = 'inline';
       document.querySelector(`#player2card${i+1}`).style.display = 'inline';
       //document.querySelector('#player1').src = data.cards[0].image;
       //document.querySelector('#player2').src = data.cards[1].image;
   })
   }
-  console.log(`This is Player 1 In War ${player1Pile}`);
+  console.log(player1Pile);
+  //console.log(`This is Player 1 In War ${player1Pile}`);
 
 
-  let player1WarVal = convertToNum(player1Pile[player1Pile.length-1]).value;
+  let player1WarVal = convertToNum(player1Pile[0]).value;
   console.log(`Player 1 val: ${player1WarVal}`)
-  let player2WarVal = convertToNum(player2Pile[player2Pile.length-1]).value;
+  let player2WarVal = convertToNum(player2Pile[0]).value;
   console.log(`Player 2 val: ${player2WarVal}`)
   if(player1WarVal > player2WarVal){
         document.querySelector('h3').innerText = 'Player 1 Wins';
