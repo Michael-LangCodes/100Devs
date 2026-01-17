@@ -13,10 +13,16 @@ function getFetch(){
       .then(data => {
         console.log(data)
         console.log(data.title)
-        //put storage into local storage
+        if(!localStorage.getItem('books')){
+          localStorage.setItem('books',data.title)
+        }else{
         let books = localStorage.getItem('books') + '  ; ' + data.title;
         localStorage.setItem('books',books);
-        //document.querySelector('img').src = data.
+        }
+        //put storage into local storage
+        // let books = localStorage.getItem('books') + '  ; ' + data.title;
+        // localStorage.setItem('books',books);
+        // //document.querySelector('img').src = data.
         document.querySelector('h2').innerText = localStorage.getItem('books');
       })
       .catch(err => {
