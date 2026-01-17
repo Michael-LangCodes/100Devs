@@ -2,6 +2,7 @@
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
+  refreshSubclasses()
   const choice = document.querySelector('input').value
   const url = `https://www.dnd5eapi.co/api/spells/${choice}`
 
@@ -26,3 +27,6 @@ function getFetch(){
       });
 }
 
+function refreshSubclasses(){
+    document.querySelector('ul').innerHTML = '';
+}
