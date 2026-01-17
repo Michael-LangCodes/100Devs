@@ -1,5 +1,7 @@
-//Example fetch using pokemonapi.co
+//Fetch Book Title From Open
 document.querySelector('button').addEventListener('click', getFetch)
+
+document.querySelector('h2').innerText = localStorage.getItem('books');
 
 function getFetch(){
   const ISBN = document.querySelector('input').value
@@ -11,8 +13,11 @@ function getFetch(){
       .then(data => {
         console.log(data)
         console.log(data.title)
-        document.querySelector('h2').innerText = data.title;
+        //put storage into local storage
+        let books = localStorage.getItem('books') + '  ; ' + data.title;
+        localStorage.setItem('books',books);
         //document.querySelector('img').src = data.
+        document.querySelector('h2').innerText = localStorage.getItem('books');
       })
       .catch(err => {
           console.log(`error ${err}`)
