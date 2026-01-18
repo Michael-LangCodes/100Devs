@@ -41,7 +41,7 @@ console.log(arrayIndexMultiple(test2));
 
 //Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.Return your answer as a number.
 function sumArray(arr){
-    const sum = arr.reduce((accumulator,currentValue) => accumulator + Number(currentValue)
+    const sum = arr.reduce((accumulator,currentValue) => accumulator + Number(currentValue), 0
     )
     return sum;
 }
