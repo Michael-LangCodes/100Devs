@@ -12,15 +12,16 @@ reverseArray(testArray);
 
 //Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
 function compareSquareToCube(a,b){
-    const aTotal = a.reduce((accumulator,currentValue) => accumulator + currentValue**2, 0 
-    )
-    const bTotal = b.reduce((accumulator,currentValue) => accumulator + currentValue**3, 0 
-    )
-    if(aTotal>bTotal){
-        return true;
-    }else {
-        return false;
-    }
+    // const aTotal = a.reduce((accumulator,currentValue) => accumulator + currentValue**2, 0 
+    // )
+    // const bTotal = b.reduce((accumulator,currentValue) => accumulator + currentValue**3, 0 
+    // )
+    // if(aTotal>bTotal){
+    //     return true;
+    // }else {
+    //     return false;
+    // }
+    return a.reduce((acc,c) => acc +c**2, 0) > b.reduce((acc,c) => acc + c**3, 0);
 }
 array1 = [1,2,3,4,5,6];
 array2 = [7,8,9];
