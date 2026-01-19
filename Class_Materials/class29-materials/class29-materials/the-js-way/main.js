@@ -83,3 +83,24 @@ console.log(aurora.describe());
 console.log(glacius.describe());
 
 //Account List
+class BankAccount{
+    constructor(name){
+        this.name = name;
+        this.balance = 0; //Auto to 0 for new accounts
+    }
+    credit = function(val){
+        this.balance += val;
+    }
+    describe = function(){
+        return `owner: ${this.name}, balance: ${this.balance}`;
+    }
+}
+
+seanBank = new BankAccount('Sean');
+bradBank = new BankAccount('Brad');
+georgeBank = new BankAccount('George');
+bankArray = [seanBank,bradBank,georgeBank];
+bankArray.forEach(element => {
+    element.credit(1000);
+    console.log(element.describe());
+});
