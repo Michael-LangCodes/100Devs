@@ -16,3 +16,5 @@ class EspressoMachine{
         console.log('Cleanniiiinnnnggg')
     }
 }
+
+let keurig = new EspressoMachine('black','small','rectangular','cold');
