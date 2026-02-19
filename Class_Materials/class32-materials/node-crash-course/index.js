@@ -1,7 +1,7 @@
-console.log('Hello From Node.js....')
+const Logger = require('./logger');
 
-const Person = require('./person')
+const logger = new Logger();
 
-const person1 = new Person('John Doen', 30);
-person1.greeting();
+logger.on('message',data=>console.log(`Called Listener`, data));
 
+logger.log('Hello World')
