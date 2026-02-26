@@ -14,7 +14,7 @@ const rappers = {
     'birthLocation': 'Chicago, Illinois'
     },
 'unknown':{
-    'age': 'unknown',
+    'age': 0,
     'birthName': 'unknown',
     'birthLocation': 'unknown'
     }
@@ -34,6 +34,6 @@ app.get('/api/:name', (req,res)=>{
     }
 })
 
-app.listen(PORT, ()=>{
+app.listen(process.env.PORT || PORT, ()=>{
     console.log(`The server is now running on port ${PORT}! Beetta Go Catch It!`)
 })
