@@ -64,6 +64,7 @@ app.post('/addTodo', (request, response) => {
 
 //Update call to update a task to completed
 app.put('/markComplete', (request, response) => {
+    //MongoDB call to update item 
     db.collection('todos').updateOne({thing: request.body.itemFromJS},{
         $set: {
             completed: true
@@ -73,7 +74,9 @@ app.put('/markComplete', (request, response) => {
         upsert: false
     })
     .then(result => {
+        //console logging that the action occurred
         console.log('Marked Complete')
+        //responding with json that it completed
         response.json('Marked Complete')
     })
     .catch(error => console.error(error))
