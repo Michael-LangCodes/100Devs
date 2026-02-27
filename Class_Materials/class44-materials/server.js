@@ -52,6 +52,8 @@ app.get('/',async (request, response)=>{
 
 //Post call to create a new task
 app.post('/addTodo', (request, response) => {
+    console.log(request)
+    console.log(request.body)
     db.collection('todos').insertOne({thing: request.body.todoItem, completed: false})
     .then(result => {
         console.log('Todo Added')
