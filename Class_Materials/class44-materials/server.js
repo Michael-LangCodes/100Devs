@@ -62,7 +62,7 @@ app.post('/addTodo', (request, response) => {
     .catch(error => console.error(error))
 })
 
-//Update call to update a task to completed
+//Update call to update a task to completed (put === update)
 app.put('/markComplete', (request, response) => {
     //MongoDB call to update item 
     db.collection('todos').updateOne({thing: request.body.itemFromJS},{
