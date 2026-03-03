@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
@@ -25,6 +26,9 @@ app.use('/', require('./routes/index'))
 //Handlebars
 app.engine('.hbs', engine({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', '.hbs');
+
+//Static Folder
+app.use(express.static(path.join(__dirname, 'public')))
 
 const PORT = process.env.PORT || 5000;
 
