@@ -33,7 +33,11 @@ app.engine('.hbs', engine({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
 //Sessions
-
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUnitialized: false,
+}))
 
 //Passport Middleware
 app.use(passport.initialize())
