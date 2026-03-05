@@ -1,10 +1,12 @@
 const path = require('path')
 const express = require('express')
+const mongoose = require('mongoose')
 const morgan = require('morgan')
 const dotenv = require('dotenv')
 const passport = require('passport')
 const session = require('express-session')
 const connectDB = require('./config/db')
+const MongoStore = require('connect-mongo')
 const { engine } = require("express-handlebars")
 
 //Load config
@@ -32,6 +34,7 @@ app.use(session({
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: false,
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI })
 }))
 
 //Passport Middleware
