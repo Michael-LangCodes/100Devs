@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const dotenv = require('dotenv');
 const { exphbs } = require('express-handlebars');
 const passport = require('passport');
-const session = require('session')
+const session = require('express-session')
 const connectDB = require('./config/db');
 const { extname } = require('node:path');
 const { engine } = require("express-handlebars");
@@ -27,6 +27,7 @@ if(process.env.NODE_ENV === 'development'){
 
 //Routes
 app.use('/', require('./routes/index'))
+app.use('/auth', require('./routes/auth'))
 
 //Handlebars
 app.engine('.hbs', engine({defaultLayout: 'main', extname: '.hbs'}));
