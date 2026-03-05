@@ -1,4 +1,4 @@
-const mongoos = requrie('mongoose');
+const mongoose = requrie('mongoose');
 
 const UserSchema = new mongoose.schema({
     googleId: {
