@@ -19,6 +19,7 @@ require('./config/passport')(passport);
 // Connect DB
 connectDB();
 
+//Create App Variable for Express
 const app = express();
 
 //Body Parser
